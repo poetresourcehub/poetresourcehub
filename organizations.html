@@ -80,7 +80,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="major-organizations"></div>
+                <div class="org-list" data-category="major-organizations"></div>
             </div>
         </div>
 
@@ -91,7 +91,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="literary-magazines"></div>
+                <div class="org-list" data-category="literary-magazines"></div>
             </div>
         </div>
 
@@ -102,7 +102,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="poetry-publishers"></div>
+                <div class="org-list" data-category="poetry-publishers"></div>
             </div>
         </div>
 
@@ -113,7 +113,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="mfa-programs"></div>
+                <div class="org-list" data-category="mfa-programs"></div>
             </div>
         </div>
 
@@ -124,7 +124,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="conferences-residencies"></div>
+                <div class="org-list" data-category="conferences-residencies"></div>
             </div>
         </div>
 
@@ -135,7 +135,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="community-organizations"></div>
+                <div class="org-list" data-category="community-organizations"></div>
             </div>
         </div>
 
@@ -146,7 +146,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="poetry-venues"></div>
+                <div class="org-list" data-category="poetry-venues"></div>
             </div>
         </div>
 
@@ -157,7 +157,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="regional-societies"></div>
+                <div class="org-list" data-category="regional-societies"></div>
             </div>
         </div>
 
@@ -168,7 +168,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="awards-prizes"></div>
+                <div class="org-list" data-category="awards-prizes"></div>
             </div>
         </div>
 
@@ -179,7 +179,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="online-platforms"></div>
+                <div class="org-list" data-category="online-platforms"></div>
             </div>
         </div>
 
@@ -190,7 +190,7 @@
                 <span class="icon">▼</span>
             </button>
             <div class="category-content">
-                <div id="additional-resources"></div>
+                <div class="org-list" data-category="additional-resources"></div>
             </div>
         </div>
 
@@ -237,7 +237,7 @@
         // Populate each category section
         Object.keys(organizedData).forEach(category => {
             const containerId = categoryMap[category];
-            const container = document.getElementById(containerId);
+            const container = document.querySelector(`[data-category="${containerId}"]`);
 
             if (container) {
                 organizedData[category].forEach(org => {
