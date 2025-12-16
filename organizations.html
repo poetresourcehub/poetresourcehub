@@ -225,102 +225,107 @@
             'Additional Resources': 'additional-resources'
         };
 
-        // Organize organizations by category
-        const organizedData = {};
-        organizations.forEach(org => {
-            if (!organizedData[org.category]) {
-                organizedData[org.category] = [];
-            }
-            organizedData[org.category].push(org);
-        });
-
-        // Populate each category section
-        Object.keys(organizedData).forEach(category => {
-            const containerId = categoryMap[category];
-            const container = document.querySelector(`[data-category="${containerId}"]`);
-
-            if (container) {
-                organizedData[category].forEach(org => {
-                    const orgDiv = document.createElement('div');
-                    orgDiv.className = 'org-item';
-                    orgDiv.innerHTML = `
-                        <h3>${org.name}</h3>
-                        <a href="${org.url}" target="_blank" rel="noopener noreferrer">${org.url}</a>
-                    `;
-                    container.appendChild(orgDiv);
-                });
-            }
-        });
-
-        // Collapsible sections functionality
-        const toggleButtons = document.querySelectorAll('.category-toggle');
-        toggleButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const content = this.nextElementSibling;
-                content.classList.toggle('active');
+        // ALL initialization code in single DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Organize organizations by category
+            const organizedData = {};
+            organizations.forEach(org => {
+                if (!organizedData[org.category]) {
+                    organizedData[org.category] = [];
+                }
+                organizedData[org.category].push(org);
             });
-        });
 
-        // Search functionality
-        const searchBar = document.getElementById('search-bar');
-        searchBar.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
+            // 2. Populate each category section
+            Object.keys(organizedData).forEach(category => {
+                const containerId = categoryMap[category];
+                const container = document.querySelector(`[data-category="${containerId}"]`);
 
-            // Get all org items
-            const allOrgItems = document.querySelectorAll('.org-item');
-
-            allOrgItems.forEach(item => {
-                const orgName = item.querySelector('h3').textContent.toLowerCase();
-                const orgUrl = item.querySelector('a').textContent.toLowerCase();
-
-                if (orgName.includes(searchTerm) || orgUrl.includes(searchTerm)) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
+                if (container) {
+                    organizedData[category].forEach(org => {
+                        const orgDiv = document.createElement('div');
+                        orgDiv.className = 'org-item';
+                        orgDiv.innerHTML = `
+                            <h3>${org.name}</h3>
+                            <a href="${org.url}" target="_blank" rel="noopener noreferrer">${org.url}</a>
+                        `;
+                        container.appendChild(orgDiv);
+                    });
                 }
             });
 
-            const categorySections = document.querySelectorAll('.category-section');
-
-            // Auto-expand sections with visible results when searching
-            if (searchTerm.length > 0) {
-                categorySections.forEach(section => {
-                    const visibleItems = section.querySelectorAll('.org-item[style=""]');
-                    const hasVisibleItems = Array.from(section.querySelectorAll('.org-item')).some(item => item.style.display !== 'none');
-
-                    const toggle = section.querySelector('.category-toggle');
-                    const content = section.querySelector('.category-content');
-
-                    if (hasVisibleItems) {
-                        toggle.classList.add('active');
-                        content.classList.add('active');
-                    } else {
-                        toggle.classList.remove('active');
-                        content.classList.remove('active');
+            // 3. Collapsible sections functionality
+            const toggleButtons = document.querySelectorAll('.category-toggle');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    if (content) {
+                        content.classList.toggle('active');
                     }
                 });
-            } else {
-                // When search is cleared, collapse all sections unless there's a hash
-                const hash = window.location.hash;
-                categorySections.forEach(section => {
-                    const toggle = section.querySelector('.category-toggle');
-                    const content = section.querySelector('.category-content');
+            });
 
-                    // Only keep the hashed section open
-                    if (hash && section.id === hash.substring(1)) {
-                        toggle.classList.add('active');
-                        content.classList.add('active');
+            // 4. Search functionality
+            const searchBar = document.getElementById('search-bar');
+            searchBar.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+
+                // Get all org items
+                const allOrgItems = document.querySelectorAll('.org-item');
+
+                allOrgItems.forEach(item => {
+                    const orgName = item.querySelector('h3').textContent.toLowerCase();
+                    const orgUrl = item.querySelector('a').textContent.toLowerCase();
+
+                    if (orgName.includes(searchTerm) || orgUrl.includes(searchTerm)) {
+                        item.style.display = '';
                     } else {
-                        toggle.classList.remove('active');
-                        content.classList.remove('active');
+                        item.style.display = 'none';
                     }
                 });
-            }
-        });
 
-        // Set active nav link
-        document.addEventListener('DOMContentLoaded', function() {
+                const categorySections = document.querySelectorAll('.category-section');
+
+                // Auto-expand sections with visible results when searching
+                if (searchTerm.length > 0) {
+                    categorySections.forEach(section => {
+                        const visibleItems = section.querySelectorAll('.org-item[style=""]');
+                        const hasVisibleItems = Array.from(section.querySelectorAll('.org-item')).some(item => item.style.display !== 'none');
+
+                        const toggle = section.querySelector('.category-toggle');
+                        const content = section.querySelector('.category-content');
+
+                        if (hasVisibleItems) {
+                            toggle.classList.add('active');
+                            content.classList.add('active');
+                        } else {
+                            toggle.classList.remove('active');
+                            content.classList.remove('active');
+                        }
+                    });
+                } else {
+                    // When search is cleared, collapse all sections unless there's a hash
+                    const hash = window.location.hash;
+                    categorySections.forEach(section => {
+                        const toggle = section.querySelector('.category-toggle');
+                        const content = section.querySelector('.category-content');
+
+                        // Only keep the hashed section open
+                        if (hash && section.id === hash.substring(1)) {
+                            toggle.classList.add('active');
+                            content.classList.add('active');
+                        } else {
+                            toggle.classList.remove('active');
+                            content.classList.remove('active');
+                        }
+                    });
+                }
+            });
+
+            // 5. Set active nav link
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             document.querySelectorAll('nav a').forEach(link => {
                 link.classList.remove('active');
@@ -329,7 +334,7 @@
                 }
             });
 
-            // Handle anchor links - open specific section if navigated via hash
+            // 6. Handle anchor links - open specific section if navigated via hash
             const hash = window.location.hash;
             if (hash) {
                 const targetSection = document.querySelector(hash);
@@ -344,48 +349,48 @@
                     }
                 }
             }
-        });
 
-        // Scroll to Top Button Functionality
-        const scrollToTopBtn = document.getElementById('scroll-to-top');
+            // 7. Scroll to Top Button Functionality
+            const scrollToTopBtn = document.getElementById('scroll-to-top');
 
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.classList.add('visible');
-            } else {
-                scrollToTopBtn.classList.remove('visible');
-            }
-        });
-
-        // Scroll to top when button is clicked
-        scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Handle quick-jump links - expand section when clicked
-        document.querySelectorAll('.quick-jump-links a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-
-                if (targetSection && targetSection.classList.contains('category-section')) {
-                    const toggle = targetSection.querySelector('.category-toggle');
-                    const content = targetSection.querySelector('.category-content');
-
-                    if (toggle && content) {
-                        toggle.classList.add('active');
-                        content.classList.add('active');
-                        // Scroll to the section
-                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
                 }
             });
-        });
+
+            // Scroll to top when button is clicked
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 8. Handle quick-jump links - expand section when clicked
+            document.querySelectorAll('.quick-jump-links a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection && targetSection.classList.contains('category-section')) {
+                        const toggle = targetSection.querySelector('.category-toggle');
+                        const content = targetSection.querySelector('.category-content');
+
+                        if (toggle && content) {
+                            toggle.classList.add('active');
+                            content.classList.add('active');
+                            // Scroll to the section
+                            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        }); // End of DOMContentLoaded
     </script>
 </body>
 </html>
