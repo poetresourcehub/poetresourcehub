@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://poetresourcehub.github.io/poetresourcehub/sitemap.xml
+Sitemap: https://poetresourcehub.com/sitemap.xml
