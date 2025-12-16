@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Poet Resource Hub - Get in touch with questions, suggestions, or to submit new poetry organizations to our directory.">
+    <meta name="keywords" content="contact, poetry resources, submit organization, poetry directory contact">
+    <meta name="author" content="Poet Resource Hub">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact - Poet Resource Hub">
+    <meta property="og:description" content="Get in touch with Poet Resource Hub for questions, suggestions, or to submit new organizations.">
+    <meta property="og:url" content="https://poetresourcehub.github.io/poetresourcehub/contact.html">
+
+    <title>Contact - Poet Resource Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Poet Resource Hub",
+        "description": "Get in touch with Poet Resource Hub",
+        "url": "https://poetresourcehub.github.io/poetresourcehub/contact.html"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Poet Resource Hub</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="organizations.html">Organizations</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="hero" style="padding: 40px;">
+            <h2>Get in Touch</h2>
+            <p>Have questions, suggestions, or want to submit a new poetry organization to our directory?</p>
+            <p>We'd love to hear from you!</p>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/xanyrdek" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email *</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" required placeholder="What is this regarding?">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required placeholder="Tell us more..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="organization">Organization Name (if submitting)</label>
+                <input type="text" id="organization" name="organization" placeholder="Name of poetry organization">
+            </div>
+
+            <div class="form-group">
+                <label for="org-url">Organization Website (if submitting)</label>
+                <input type="url" id="org-url" name="org-url" placeholder="https://example.org">
+            </div>
+
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+
+        <div style="background: #FEFEF5; border-radius: 15px; padding: 30px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-top: 30px; text-align: center;">
+            <h3 style="color: #2D5016; font-size: 1.5em; margin-bottom: 15px;">What We're Looking For</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div style="padding: 20px; background: white; border-radius: 10px;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">✍️</div>
+                    <h4 style="color: #4A7C59; margin-bottom: 8px;">New Submissions</h4>
+                    <p style="color: #666; font-size: 0.95em;">Know a poetry organization we should include? Let us know!</p>
+                </div>
+                <div style="padding: 20px; background: white; border-radius: 10px;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🔄</div>
+                    <h4 style="color: #4A7C59; margin-bottom: 8px;">Updates</h4>
+                    <p style="color: #666; font-size: 0.95em;">Found outdated information? Help us keep the directory current.</p>
+                </div>
+                <div style="padding: 20px; background: white; border-radius: 10px;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">💡</div>
+                    <h4 style="color: #4A7C59; margin-bottom: 8px;">Suggestions</h4>
+                    <p style="color: #666; font-size: 0.95em;">Have ideas to improve the site? We're all ears!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Poet Resource Hub</p>
+    </footer>
+
+    <script>
+        // Set active nav link
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission handling
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', function(e) {
+            const button = form.querySelector('.submit-button');
+            button.textContent = 'Sending...';
+            button.disabled = true;
+        });
+    </script>
+</body>
+</html>

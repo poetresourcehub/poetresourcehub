@@ -3,381 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Poet Resource Hub - Your comprehensive directory of 402 poetry organizations worldwide. Find literary magazines, publishers, MFA programs, awards, conferences, and more.">
+    <meta name="keywords" content="poetry, poetry organizations, literary magazines, poetry publishers, MFA programs, poetry awards, poetry resources">
+    <meta name="author" content="Poet Resource Hub">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Poet Resource Hub - 402 Poetry Organizations">
+    <meta property="og:description" content="Comprehensive directory of poetry organizations worldwide including literary magazines, publishers, MFA programs, and awards.">
+    <meta property="og:url" content="https://poetresourcehub.github.io/poetresourcehub/">
+
     <title>Poet Resource Hub - 402 Poetry Organizations</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Poet Resource Hub",
+        "url": "https://poetresourcehub.github.io/poetresourcehub/",
+        "description": "Comprehensive directory of 402 poetry organizations worldwide",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://poetresourcehub.github.io/poetresourcehub/organizations.html?q={search_term_string}",
+            "query-input": "required name=search_term_string"
         }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #2D5016 0%, #4A7C59 50%, #6B8E23 100%);
-            min-height: 100vh;
-            padding: 0;
-        }
-
-        header {
-            background: rgba(45, 80, 22, 0.8);
-            padding: 30px 20px;
-            text-align: center;
-            border-bottom: 3px solid #6B8E23;
-        }
-
-        h1 {
-            font-family: 'Great Vibes', cursive;
-            color: #F5F5DC;
-            font-size: 4em;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .tagline {
-            color: #C8E6C9;
-            font-size: 1.1em;
-            margin-top: 10px;
-            font-weight: 300;
-        }
-
-        .stats {
-            color: #F5F5DC;
-            font-size: 1.2em;
-            margin-top: 15px;
-            font-weight: 700;
-        }
-
-        .search-container {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        #search-bar {
-            width: 100%;
-            padding: 15px 20px;
-            font-size: 1.1em;
-            border: 3px solid #4A7C59;
-            border-radius: 30px;
-            outline: none;
-            font-family: 'Lato', sans-serif;
-        }
-
-        #search-bar:focus {
-            border-color: #6B8E23;
-            box-shadow: 0 0 10px rgba(107, 142, 35, 0.3);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .category-card {
-            background: #FEFEF5;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-        }
-
-        .category-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-
-        .category-title {
-            font-size: 1.4em;
-            color: #2D5016;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .category-count {
-            font-size: 1.1em;
-            color: #4A7C59;
-            font-weight: 400;
-        }
-
-        .category-description {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 10px;
-            line-height: 1.4;
-        }
-
-        footer {
-            background: rgba(45, 80, 22, 0.8);
-            color: #F5F5DC;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 3em;
-            }
-
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .category-card {
-                padding: 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.5em;
-            }
-
-            .category-title {
-                font-size: 1.2em;
-            }
-        }
-    </style>
+    }
+    </script>
 </head>
 <body>
     <header>
         <h1>Poet Resource Hub</h1>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="organizations.html">Organizations</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
 
-    <div class="search-container">
-        <input type="text" id="search-bar" placeholder="Search organizations by name or keyword...">
-    </div>
-
     <div class="container">
-        <div class="categories-grid">
-            <a href="major-organizations.html" class="category-card">
-                <div class="category-icon">⭐</div>
-                <div class="category-title">Major Organizations</div>
-                <div class="category-count">10 Organizations</div>
-                <div class="category-description">Leading national and international poetry organizations</div>
-            </a>
+        <div class="hero">
+            <h2>Your Gateway to the Poetry World</h2>
+            <p>Discover 402 carefully curated poetry organizations spanning 11 categories worldwide.</p>
+            <p>From major national organizations to independent literary magazines, from prestigious awards to vibrant community groups - find the resources you need to advance your poetry journey.</p>
 
-            <a href="literary-magazines.html" class="category-card">
-                <div class="category-icon">📖</div>
-                <div class="category-title">Literary Magazines</div>
-                <div class="category-count">167 Publications</div>
-                <div class="category-description">Poetry journals and literary magazines</div>
-            </a>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">402</div>
+                    <div class="stat-label">Organizations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">11</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">167</div>
+                    <div class="stat-label">Literary Magazines</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">57</div>
+                    <div class="stat-label">Publishers</div>
+                </div>
+            </div>
 
-            <a href="publishers.html" class="category-card">
-                <div class="category-icon">📚</div>
-                <div class="category-title">Poetry Publishers</div>
-                <div class="category-count">57 Publishers</div>
-                <div class="category-description">Independent and commercial poetry presses</div>
-            </a>
-
-            <a href="mfa-programs.html" class="category-card">
-                <div class="category-icon">🎓</div>
-                <div class="category-title">MFA Programs</div>
-                <div class="category-count">20 Programs</div>
-                <div class="category-description">University-based poetry and creative writing programs</div>
-            </a>
-
-            <a href="conferences.html" class="category-card">
-                <div class="category-icon">🏕️</div>
-                <div class="category-title">Conferences & Residencies</div>
-                <div class="category-count">12 Opportunities</div>
-                <div class="category-description">Writing retreats and poetry conferences</div>
-            </a>
-
-            <a href="community-organizations.html" class="category-card">
-                <div class="category-icon">🤝</div>
-                <div class="category-title">Community Organizations</div>
-                <div class="category-count">15 Organizations</div>
-                <div class="category-description">Organizations for specific communities and identities</div>
-            </a>
-
-            <a href="venues.html" class="category-card">
-                <div class="category-icon">🏛️</div>
-                <div class="category-title">Poetry Venues</div>
-                <div class="category-count">13 Venues</div>
-                <div class="category-description">Physical centers and performance spaces</div>
-            </a>
-
-            <a href="regional-societies.html" class="category-card">
-                <div class="category-icon">🗺️</div>
-                <div class="category-title">Regional Societies</div>
-                <div class="category-count">54 Societies</div>
-                <div class="category-description">State and regional poetry organizations</div>
-            </a>
-
-            <a href="awards.html" class="category-card">
-                <div class="category-icon">🏆</div>
-                <div class="category-title">Awards & Prizes</div>
-                <div class="category-count">21 Programs</div>
-                <div class="category-description">Poetry prizes and recognition programs</div>
-            </a>
-
-            <a href="online-platforms.html" class="category-card">
-                <div class="category-icon">💻</div>
-                <div class="category-title">Online Platforms</div>
-                <div class="category-count">14 Platforms</div>
-                <div class="category-description">Digital publishers and online poetry communities</div>
-            </a>
-
-            <a href="additional-organizations.html" class="category-card">
-                <div class="category-icon">📝</div>
-                <div class="category-title">Additional Resources</div>
-                <div class="category-count">29 Organizations</div>
-                <div class="category-description">Archives, international presses, and special collections</div>
-            </a>
+            <a href="organizations.html" class="cta-button">Explore All Organizations</a>
         </div>
+
+        <section style="background: #FEFEF5; border-radius: 15px; padding: 40px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-top: 30px;">
+            <h2 style="color: #2D5016; font-size: 2em; margin-bottom: 25px; text-align: center;">Browse by Category</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="padding: 20px; background: white; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">⭐</div>
+                    <h3 style="color: #2D5016; margin-bottom: 10px;">Major Organizations</h3>
+                    <p style="color: #666;">Leading national and international poetry organizations</p>
+                </div>
+                <div style="padding: 20px; background: white; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">📖</div>
+                    <h3 style="color: #2D5016; margin-bottom: 10px;">Literary Magazines</h3>
+                    <p style="color: #666;">Poetry journals and literary magazines</p>
+                </div>
+                <div style="padding: 20px; background: white; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">📚</div>
+                    <h3 style="color: #2D5016; margin-bottom: 10px;">Publishers</h3>
+                    <p style="color: #666;">Independent and commercial poetry presses</p>
+                </div>
+                <div style="padding: 20px; background: white; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">🎓</div>
+                    <h3 style="color: #2D5016; margin-bottom: 10px;">MFA Programs</h3>
+                    <p style="color: #666;">University-based poetry programs</p>
+                </div>
+                <div style="padding: 20px; background: white; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">🏕️</div>
+                    <h3 style="color: #2D5016; margin-bottom: 10px;">Conferences</h3>
+                    <p style="color: #666;">Writing retreats and conferences</p>
+                </div>
+                <div style="padding: 20px; background: white; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">🏆</div>
+                    <h3 style="color: #2D5016; margin-bottom: 10px;">Awards</h3>
+                    <p style="color: #666;">Poetry prizes and recognition programs</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="organizations.html" class="cta-button">View All Categories</a>
+            </div>
+        </section>
     </div>
 
     <footer>
         <p>&copy; 2025 Poet Resource Hub</p>
     </footer>
 
-    <script src="organizations-data.js"></script>
     <script>
-        // Create search results container
-        const searchContainer = document.querySelector('.search-container');
-        const searchResultsDiv = document.createElement('div');
-        searchResultsDiv.id = 'search-results';
-        searchResultsDiv.style.cssText = `
-            position: relative;
-            max-width: 1200px;
-            margin: -15px auto 0;
-            padding: 0 20px;
-            display: none;
-        `;
-
-        const searchResultsContent = document.createElement('div');
-        searchResultsContent.style.cssText = `
-            background: white;
-            border: 3px solid #4A7C59;
-            border-radius: 15px;
-            padding: 20px;
-            max-height: 500px;
-            overflow-y: auto;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        `;
-
-        searchResultsDiv.appendChild(searchResultsContent);
-        searchContainer.parentNode.insertBefore(searchResultsDiv, searchContainer.nextSibling);
-
-        // Real-time search functionality
-        const searchBar = document.getElementById('search-bar');
-
-        searchBar.addEventListener('input', function(e) {
-            const searchTerm = e.target.value.trim().toLowerCase();
-
-            // If search is empty, hide results and show category cards
-            if (searchTerm === '') {
-                searchResultsDiv.style.display = 'none';
-                document.querySelector('.container').style.display = 'block';
-                return;
-            }
-
-            // Filter organizations based on search term
-            const matchingOrgs = organizations.filter(org => {
-                return org.name.toLowerCase().includes(searchTerm) ||
-                       org.category.toLowerCase().includes(searchTerm);
-            });
-
-            // Display results
-            if (matchingOrgs.length > 0) {
-                searchResultsDiv.style.display = 'block';
-                document.querySelector('.container').style.display = 'none';
-
-                let resultsHTML = `<h2 style="color: #2D5016; margin-bottom: 15px; font-size: 1.3em;">
-                    Found ${matchingOrgs.length} result${matchingOrgs.length !== 1 ? 's' : ''} for "${e.target.value}"
-                </h2>`;
-
-                // Group results by category
-                const groupedResults = {};
-                matchingOrgs.forEach(org => {
-                    if (!groupedResults[org.category]) {
-                        groupedResults[org.category] = [];
-                    }
-                    groupedResults[org.category].push(org);
-                });
-
-                // Display grouped results
-                for (const [category, orgs] of Object.entries(groupedResults)) {
-                    resultsHTML += `
-                        <div style="margin-bottom: 25px;">
-                            <h3 style="color: #4A7C59; font-size: 1.1em; margin-bottom: 10px; border-bottom: 2px solid #C8E6C9; padding-bottom: 5px;">
-                                ${category} (${orgs.length})
-                            </h3>
-                            <div style="display: grid; gap: 10px;">
-                    `;
-
-                    orgs.forEach(org => {
-                        resultsHTML += `
-                            <div style="background: #F5F5DC; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #6B8E23;">
-                                <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 10px;">
-                                    <div style="flex: 1; min-width: 200px;">
-                                        <a href="${org.url}" target="_blank" style="color: #2D5016; text-decoration: none; font-weight: 700; font-size: 1.05em;">
-                                            ${org.name}
-                                        </a>
-                                        <div style="color: #666; font-size: 0.9em; margin-top: 3px;">
-                                            ${org.category}
-                                        </div>
-                                    </div>
-                                    <div style="display: flex; gap: 10px;">
-                                        <a href="${org.url}" target="_blank"
-                                           style="background: #4A7C59; color: white; padding: 6px 15px; border-radius: 5px; text-decoration: none; font-size: 0.9em; white-space: nowrap;">
-                                            Visit Site
-                                        </a>
-                                        <a href="${org.categoryUrl}"
-                                           style="background: #6B8E23; color: white; padding: 6px 15px; border-radius: 5px; text-decoration: none; font-size: 0.9em; white-space: nowrap;">
-                                            View Category
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                    });
-
-                    resultsHTML += `
-                            </div>
-                        </div>
-                    `;
+        // Set active nav link
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
                 }
-
-                searchResultsContent.innerHTML = resultsHTML;
-            } else {
-                searchResultsDiv.style.display = 'block';
-                document.querySelector('.container').style.display = 'none';
-                searchResultsContent.innerHTML = `
-                    <div style="text-align: center; padding: 40px; color: #666;">
-                        <h2 style="color: #2D5016; margin-bottom: 10px;">No results found</h2>
-                        <p>Try searching for a different term or browse categories below.</p>
-                        <button onclick="document.getElementById('search-bar').value = ''; document.getElementById('search-bar').dispatchEvent(new Event('input'));"
-                                style="margin-top: 20px; background: #4A7C59; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">
-                            Clear Search
-                        </button>
-                    </div>
-                `;
-            }
+            });
         });
     </script>
 </body>

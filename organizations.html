@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse 402 poetry organizations across 11 categories - Literary Magazines, Publishers, MFA Programs, Conferences, Awards, and more.">
+    <meta name="keywords" content="poetry organizations, literary magazines, poetry publishers, MFA programs, poetry awards, poetry conferences, poetry resources">
+    <meta name="author" content="Poet Resource Hub">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="All Poetry Organizations - Poet Resource Hub">
+    <meta property="og:description" content="Complete directory of 402 poetry organizations including literary magazines, publishers, MFA programs, awards, and more.">
+    <meta property="og:url" content="https://poetresourcehub.github.io/poetresourcehub/organizations.html">
+
+    <title>All Organizations - Poet Resource Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Poetry Organizations Directory",
+        "description": "Comprehensive directory of 402 poetry organizations worldwide",
+        "numberOfItems": 402
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Poet Resource Hub</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="organizations.html" class="active">Organizations</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search 402 poetry organizations...">
+    </div>
+
+    <div class="container">
+        <div class="category-header">
+            <h2>All Poetry Organizations</h2>
+            <p class="category-count">402 organizations across 11 categories</p>
+        </div>
+
+        <!-- Major Organizations -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>⭐ Major Organizations</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="major-organizations"></div>
+            </div>
+        </div>
+
+        <!-- Literary Magazines -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>📖 Literary Magazines</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="literary-magazines"></div>
+            </div>
+        </div>
+
+        <!-- Poetry Publishers -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>📚 Poetry Publishers</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="poetry-publishers"></div>
+            </div>
+        </div>
+
+        <!-- MFA Programs -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>🎓 MFA Programs</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="mfa-programs"></div>
+            </div>
+        </div>
+
+        <!-- Conferences & Residencies -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>🏕️ Conferences & Residencies</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="conferences-residencies"></div>
+            </div>
+        </div>
+
+        <!-- Community Organizations -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>🤝 Community Organizations</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="community-organizations"></div>
+            </div>
+        </div>
+
+        <!-- Poetry Venues -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>🏛️ Poetry Venues</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="poetry-venues"></div>
+            </div>
+        </div>
+
+        <!-- Regional Societies -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>🗺️ Regional Societies</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="regional-societies"></div>
+            </div>
+        </div>
+
+        <!-- Awards & Prizes -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>🏆 Awards & Prizes</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="awards-prizes"></div>
+            </div>
+        </div>
+
+        <!-- Online Platforms -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>💻 Online Platforms</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="online-platforms"></div>
+            </div>
+        </div>
+
+        <!-- Additional Resources -->
+        <div class="category-section">
+            <button class="category-toggle">
+                <span>📝 Additional Resources</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="category-content">
+                <div id="additional-resources"></div>
+            </div>
+        </div>
+
+        <div class="back-button-container">
+            <a href="index.html" class="back-button">Back to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Poet Resource Hub</p>
+    </footer>
+
+    <script src="organizations-data.js"></script>
+    <script>
+        // Category mapping
+        const categoryMap = {
+            'Major Organizations': 'major-organizations',
+            'Literary Magazines': 'literary-magazines',
+            'Poetry Publishers': 'poetry-publishers',
+            'MFA Programs': 'mfa-programs',
+            'Conferences & Residencies': 'conferences-residencies',
+            'Community Organizations': 'community-organizations',
+            'Poetry Venues': 'poetry-venues',
+            'Regional Societies': 'regional-societies',
+            'Awards & Prizes': 'awards-prizes',
+            'Online Platforms': 'online-platforms',
+            'Additional Resources': 'additional-resources'
+        };
+
+        // Organize organizations by category
+        const organizedData = {};
+        organizations.forEach(org => {
+            if (!organizedData[org.category]) {
+                organizedData[org.category] = [];
+            }
+            organizedData[org.category].push(org);
+        });
+
+        // Populate each category section
+        Object.keys(organizedData).forEach(category => {
+            const containerId = categoryMap[category];
+            const container = document.getElementById(containerId);
+
+            if (container) {
+                organizedData[category].forEach(org => {
+                    const orgDiv = document.createElement('div');
+                    orgDiv.className = 'org-item';
+                    orgDiv.innerHTML = `
+                        <h3>${org.name}</h3>
+                        <a href="${org.url}" target="_blank" rel="noopener noreferrer">${org.url}</a>
+                    `;
+                    container.appendChild(orgDiv);
+                });
+            }
+        });
+
+        // Collapsible sections functionality
+        const toggleButtons = document.querySelectorAll('.category-toggle');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+
+        // Search functionality
+        const searchBar = document.getElementById('search-bar');
+        searchBar.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+
+            // Get all org items
+            const allOrgItems = document.querySelectorAll('.org-item');
+
+            allOrgItems.forEach(item => {
+                const orgName = item.querySelector('h3').textContent.toLowerCase();
+                const orgUrl = item.querySelector('a').textContent.toLowerCase();
+
+                if (orgName.includes(searchTerm) || orgUrl.includes(searchTerm)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Auto-expand sections with visible results when searching
+            if (searchTerm.length > 0) {
+                const categorySections = document.querySelectorAll('.category-section');
+                categorySections.forEach(section => {
+                    const visibleItems = section.querySelectorAll('.org-item[style=""]');
+                    const hasVisibleItems = Array.from(section.querySelectorAll('.org-item')).some(item => item.style.display !== 'none');
+
+                    const toggle = section.querySelector('.category-toggle');
+                    const content = section.querySelector('.category-content');
+
+                    if (hasVisibleItems) {
+                        toggle.classList.add('active');
+                        content.classList.add('active');
+                    } else {
+                        toggle.classList.remove('active');
+                        content.classList.remove('active');
+                    }
+                });
+            }
+        });
+
+        // Set active nav link
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
