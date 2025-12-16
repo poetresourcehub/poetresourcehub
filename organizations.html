@@ -258,9 +258,10 @@
                 }
             });
 
+            const categorySections = document.querySelectorAll('.category-section');
+
             // Auto-expand sections with visible results when searching
             if (searchTerm.length > 0) {
-                const categorySections = document.querySelectorAll('.category-section');
                 categorySections.forEach(section => {
                     const visibleItems = section.querySelectorAll('.org-item[style=""]');
                     const hasVisibleItems = Array.from(section.querySelectorAll('.org-item')).some(item => item.style.display !== 'none');
@@ -269,6 +270,22 @@
                     const content = section.querySelector('.category-content');
 
                     if (hasVisibleItems) {
+                        toggle.classList.add('active');
+                        content.classList.add('active');
+                    } else {
+                        toggle.classList.remove('active');
+                        content.classList.remove('active');
+                    }
+                });
+            } else {
+                // When search is cleared, collapse all sections unless there's a hash
+                const hash = window.location.hash;
+                categorySections.forEach(section => {
+                    const toggle = section.querySelector('.category-toggle');
+                    const content = section.querySelector('.category-content');
+
+                    // Only keep the hashed section open
+                    if (hash && section.id === hash.substring(1)) {
                         toggle.classList.add('active');
                         content.classList.add('active');
                     } else {
@@ -288,6 +305,22 @@
                     link.classList.add('active');
                 }
             });
+
+            // Handle anchor links - open specific section if navigated via hash
+            const hash = window.location.hash;
+            if (hash) {
+                const targetSection = document.querySelector(hash);
+                if (targetSection && targetSection.classList.contains('category-section')) {
+                    const toggle = targetSection.querySelector('.category-toggle');
+                    const content = targetSection.querySelector('.category-content');
+                    if (toggle && content) {
+                        toggle.classList.add('active');
+                        content.classList.add('active');
+                        // Scroll to the section
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            }
         });
     </script>
 </body>
