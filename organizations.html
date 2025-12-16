@@ -55,6 +55,24 @@
             <h2>Organizations</h2>
         </div>
 
+        <!-- Quick Jump Navigation -->
+        <div class="quick-jump">
+            <h3>Quick Jump to Category:</h3>
+            <div class="quick-jump-links">
+                <a href="#major-organizations">⭐ Major Orgs</a>
+                <a href="#literary-magazines">📖 Magazines</a>
+                <a href="#poetry-publishers">📚 Publishers</a>
+                <a href="#mfa-programs">🎓 MFA Programs</a>
+                <a href="#conferences">🏕️ Conferences</a>
+                <a href="#community-organizations">🤝 Community</a>
+                <a href="#poetry-venues">🏛️ Venues</a>
+                <a href="#regional-societies">🗺️ Regional</a>
+                <a href="#awards">🏆 Awards</a>
+                <a href="#online-platforms">💻 Online</a>
+                <a href="#additional-resources">📝 Resources</a>
+            </div>
+        </div>
+
         <!-- Major Organizations -->
         <div class="category-section" id="major-organizations">
             <button class="category-toggle">
@@ -184,6 +202,11 @@
     <footer>
         <p>&copy; 2025 Poet Resource Hub | <a href="privacy-policy.html" style="color: #F5F5DC;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #F5F5DC;">Terms of Service</a></p>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+        ↑
+    </button>
 
     <script src="organizations-data.js"></script>
     <script>
@@ -321,6 +344,47 @@
                     }
                 }
             }
+        });
+
+        // Scroll to Top Button Functionality
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top when button is clicked
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Handle quick-jump links - expand section when clicked
+        document.querySelectorAll('.quick-jump-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection && targetSection.classList.contains('category-section')) {
+                    const toggle = targetSection.querySelector('.category-toggle');
+                    const content = targetSection.querySelector('.category-content');
+
+                    if (toggle && content) {
+                        toggle.classList.add('active');
+                        content.classList.add('active');
+                        // Scroll to the section
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
         });
     </script>
 </body>
