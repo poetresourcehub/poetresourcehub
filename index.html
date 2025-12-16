@@ -164,8 +164,6 @@
 <body>
     <header>
         <h1>Poet Resource Hub</h1>
-        <p class="tagline">Your comprehensive guide to poetry organizations worldwide</p>
-        <p class="stats">402 Organizations • 11 Categories</p>
     </header>
 
     <div class="search-container">
@@ -254,25 +252,132 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Poet Resource Hub | Connecting poets with opportunities worldwide</p>
+        <p>&copy; 2025 Poet Resource Hub</p>
     </footer>
 
+    <script src="organizations-data.js"></script>
     <script>
-        // Simple search functionality
-        document.getElementById('search-bar').addEventListener('input', function(e) {
-            const searchTerm = e.target.value.toLowerCase();
-            const cards = document.querySelectorAll('.category-card');
+        // Create search results container
+        const searchContainer = document.querySelector('.search-container');
+        const searchResultsDiv = document.createElement('div');
+        searchResultsDiv.id = 'search-results';
+        searchResultsDiv.style.cssText = `
+            position: relative;
+            max-width: 1200px;
+            margin: -15px auto 0;
+            padding: 0 20px;
+            display: none;
+        `;
 
-            cards.forEach(card => {
-                const title = card.querySelector('.category-title').textContent.toLowerCase();
-                const description = card.querySelector('.category-description').textContent.toLowerCase();
+        const searchResultsContent = document.createElement('div');
+        searchResultsContent.style.cssText = `
+            background: white;
+            border: 3px solid #4A7C59;
+            border-radius: 15px;
+            padding: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        `;
 
-                if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+        searchResultsDiv.appendChild(searchResultsContent);
+        searchContainer.parentNode.insertBefore(searchResultsDiv, searchContainer.nextSibling);
+
+        // Real-time search functionality
+        const searchBar = document.getElementById('search-bar');
+
+        searchBar.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.trim().toLowerCase();
+
+            // If search is empty, hide results and show category cards
+            if (searchTerm === '') {
+                searchResultsDiv.style.display = 'none';
+                document.querySelector('.container').style.display = 'block';
+                return;
+            }
+
+            // Filter organizations based on search term
+            const matchingOrgs = organizations.filter(org => {
+                return org.name.toLowerCase().includes(searchTerm) ||
+                       org.category.toLowerCase().includes(searchTerm);
             });
+
+            // Display results
+            if (matchingOrgs.length > 0) {
+                searchResultsDiv.style.display = 'block';
+                document.querySelector('.container').style.display = 'none';
+
+                let resultsHTML = `<h2 style="color: #2D5016; margin-bottom: 15px; font-size: 1.3em;">
+                    Found ${matchingOrgs.length} result${matchingOrgs.length !== 1 ? 's' : ''} for "${e.target.value}"
+                </h2>`;
+
+                // Group results by category
+                const groupedResults = {};
+                matchingOrgs.forEach(org => {
+                    if (!groupedResults[org.category]) {
+                        groupedResults[org.category] = [];
+                    }
+                    groupedResults[org.category].push(org);
+                });
+
+                // Display grouped results
+                for (const [category, orgs] of Object.entries(groupedResults)) {
+                    resultsHTML += `
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #4A7C59; font-size: 1.1em; margin-bottom: 10px; border-bottom: 2px solid #C8E6C9; padding-bottom: 5px;">
+                                ${category} (${orgs.length})
+                            </h3>
+                            <div style="display: grid; gap: 10px;">
+                    `;
+
+                    orgs.forEach(org => {
+                        resultsHTML += `
+                            <div style="background: #F5F5DC; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #6B8E23;">
+                                <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 10px;">
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <a href="${org.url}" target="_blank" style="color: #2D5016; text-decoration: none; font-weight: 700; font-size: 1.05em;">
+                                            ${org.name}
+                                        </a>
+                                        <div style="color: #666; font-size: 0.9em; margin-top: 3px;">
+                                            ${org.category}
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; gap: 10px;">
+                                        <a href="${org.url}" target="_blank"
+                                           style="background: #4A7C59; color: white; padding: 6px 15px; border-radius: 5px; text-decoration: none; font-size: 0.9em; white-space: nowrap;">
+                                            Visit Site
+                                        </a>
+                                        <a href="${org.categoryUrl}"
+                                           style="background: #6B8E23; color: white; padding: 6px 15px; border-radius: 5px; text-decoration: none; font-size: 0.9em; white-space: nowrap;">
+                                            View Category
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    resultsHTML += `
+                            </div>
+                        </div>
+                    `;
+                }
+
+                searchResultsContent.innerHTML = resultsHTML;
+            } else {
+                searchResultsDiv.style.display = 'block';
+                document.querySelector('.container').style.display = 'none';
+                searchResultsContent.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #666;">
+                        <h2 style="color: #2D5016; margin-bottom: 10px;">No results found</h2>
+                        <p>Try searching for a different term or browse categories below.</p>
+                        <button onclick="document.getElementById('search-bar').value = ''; document.getElementById('search-bar').dispatchEvent(new Event('input'));"
+                                style="margin-top: 20px; background: #4A7C59; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">
+                            Clear Search
+                        </button>
+                    </div>
+                `;
+            }
         });
     </script>
 </body>
