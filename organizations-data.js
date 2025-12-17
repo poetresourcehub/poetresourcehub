@@ -119,7 +119,7 @@ const organizations = [
     },
     {
         name: "The Southern Review",
-        url: "https://lsu.edu/thesouthernreview",
+        url: "https://thesouthernreview.org",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -137,7 +137,7 @@ const organizations = [
     },
     {
         name: "Georgia Review",
-        url: "https://georgireview.uga.edu",
+        url: "https://thegeorgiareview.com",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -149,7 +149,7 @@ const organizations = [
     },
     {
         name: "Rattle",
-        url: "https://www.rattle.submittable.com",
+        url: "https://www.rattle.com",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -161,7 +161,7 @@ const organizations = [
     },
     {
         name: "Denver Quarterly",
-        url: "https://denverquarterly.submittable.com",
+        url: "https://www.du.edu/denverquarterly",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -299,7 +299,7 @@ const organizations = [
     },
     {
         name: "Mid-American Review",
-        url: "https://www.bgsu.edu/midamerican",
+        url: "https://scholarworks.bgsu.edu/midamreview",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -311,7 +311,7 @@ const organizations = [
     },
     {
         name: "Ninth Letter",
-        url: "https://www.english.illinois.edu/ninthletters",
+        url: "https://www.ninthletter.com",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -377,7 +377,7 @@ const organizations = [
     },
     {
         name: "Southern Indiana Review",
-        url: "https://www.uofs.edu/English/sir",
+        url: "https://www.usi.edu/sir",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -701,7 +701,7 @@ const organizations = [
     },
     {
         name: "The Journal",
-        url: "https://www.ohiostate.edu/academics/english/journal",
+        url: "https://english.osu.edu/about-us/the-journal",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -851,7 +851,7 @@ const organizations = [
     },
     {
         name: "Sky Island Journal",
-        url: "https://skyislandjournal.submittable.com",
+        url: "https://www.skyislandjournal.com",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -875,7 +875,7 @@ const organizations = [
     },
     {
         name: "Anomaly Poetry Anthology Series",
-        url: "https://poets.org",
+        url: "https://anomalylit.com",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -887,7 +887,7 @@ const organizations = [
     },
     {
         name: "Apple in the Dark Journal",
-        url: "https://poets.org",
+        url: "https://www.appleinthedark.com",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -923,7 +923,7 @@ const organizations = [
     },
     {
         name: "Deep Wild Journal Writing from the Backcountry",
-        url: "https://poets.org",
+        url: "https://deepwild.org",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -971,7 +971,7 @@ const organizations = [
     },
     {
         name: "Pinhole Poetry",
-        url: "https://poets.org",
+        url: "https://pinholepoetry.com",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -995,13 +995,13 @@ const organizations = [
     },
     {
         name: "Chiron Review",
-        url: "https://poets.org",
+        url: "https://www.chironreview.com",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
     {
         name: "Connecticut Review",
-        url: "https://connecticutriverreview.submittable.com",
+        url: "https://www.ctreview.org",
         category: "Literary Magazines",
         categoryUrl: "literary-magazines.html"
     },
@@ -1359,7 +1359,7 @@ const organizations = [
     },
     {
         name: "Johns Hopkins University Writing Seminars",
-        url: "https://www.jhu.edu/writingseminars",
+        url: "https://writingseminars.jhu.edu",
         category: "MFA Programs",
         categoryUrl: "mfa-programs.html"
     },
@@ -1371,13 +1371,13 @@ const organizations = [
     },
     {
         name: "Syracuse University MFA Creative Writing",
-        url: "https://www.esf.edu/creativewriting",
+        url: "https://english.syr.edu/graduate-program/creative-writing-mfa",
         category: "MFA Programs",
         categoryUrl: "mfa-programs.html"
     },
     {
         name: "Cornell University MFA",
-        url: "https://www.cornell.edu",
+        url: "https://english.cornell.edu/mfa-creative-writing",
         category: "MFA Programs",
         categoryUrl: "mfa-programs.html"
     },
@@ -1401,7 +1401,7 @@ const organizations = [
     },
     {
         name: "Arizona State University MFA",
-        url: "https://asunow.asu.edu/20231003-mfa-creative-writing",
+        url: "https://english.asu.edu/degree-programs/graduate/creative-writing-mfa",
         category: "MFA Programs",
         categoryUrl: "mfa-programs.html"
     },
@@ -1431,7 +1431,7 @@ const organizations = [
     },
     {
         name: "Columbia College Chicago MFA",
-        url: "https://www.colum.edu/academics/creativewriting",
+        url: "https://www.colum.edu/creative-writing-mfa",
         category: "MFA Programs",
         categoryUrl: "mfa-programs.html"
     },
@@ -1449,7 +1449,7 @@ const organizations = [
     },
     {
         name: "Boise State University (Ahsahta Press)",
-        url: "https://ahshtapress.boisestate.edu",
+        url: "https://ahsahtapress.org",
         category: "MFA Programs",
         categoryUrl: "mfa-programs.html"
     },
@@ -1461,13 +1461,13 @@ const organizations = [
     },
     {
         name: "University of Cincinnati",
-        url: "https://www.uc.edu",
+        url: "https://www.uc.edu/programs/graduate/english-mfa.html",
         category: "MFA Programs",
         categoryUrl: "mfa-programs.html"
     },
     {
         name: "University of Wisconsin",
-        url: "https://www.wisc.edu",
+        url: "https://creativewriting.wisc.edu",
         category: "MFA Programs",
         categoryUrl: "mfa-programs.html"
     },
@@ -1757,181 +1757,181 @@ const organizations = [
     },
     {
         name: "Alabama State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.alabamapoetry.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Poets' Roundtable of Arkansas",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://arkansaspoetry.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "California State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.casps.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Columbine Poets of Colorado",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.columbinepoets.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Connecticut Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.ctpoetrysociety.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Florida State Poets Association",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.flstatepoets.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Georgia Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.georgiapoetrysociety.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Maine Poets Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.mainepoetssociety.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Massachusetts State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://masspoetry.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Poetry Society of Michigan",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.poetrysocietyofmichigan.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "League of Minnesota Poets",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://mnpoets.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Mississippi Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.mspoetry.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Missouri State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://missouripoetrysociety.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Nevada Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.nvpoetrysociety.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "New Mexico State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://nmstatepoetry.weebly.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Pennsylvania Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.papoetrysociety.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Poetry Society of Indiana",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.poetrysocietyofindiana.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Iowa Poetry Association",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.iowapoetry.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Sunflower Poetry Society of Kansas",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.sunflowerpoetrysociety.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Poetry Society of Louisiana",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.louisianapoets.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Ohio Poetry Association",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.ohiopoetryassoc.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Oklahoma State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.okpoets.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Oregon Poetry Association",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.oregonpoetry.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "South Dakota State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.sdpoetrysociety.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Tennessee Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.tnpoetry.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Poetry Society of Texas",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.poetrysocietyoftexas.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Utah State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.utahpoets.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "WyoPoets (Wyoming)",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.wyopoets.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Free Poets Collective",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.freepoets.net",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "North Carolina Writers' Network",
-        url: "https://www.pw.org/directory",
+        url: "https://www.ncwriters.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
@@ -1943,97 +1943,97 @@ const organizations = [
     },
     {
         name: "Delaware Valley Poets",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.delawarevalleypoets.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Hawaii Writers Guild",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.hawaiiwritersguild.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Idaho State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.idahostatepoetry.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Maryland State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://marylandpoets.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Nebraska State Poetry Association",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://nebraskastatepoetry.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "New Hampshire Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://nhpoetssociety.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "New Jersey Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.njpoetrysociety.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "North Dakota State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.ndpoetry.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Rhode Island State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.ripoetry.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "South Carolina Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.scpoetrysociety.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Vermont Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.vermontpoetssociety.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Virginia Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.virginiapoets.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "West Virginia Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.wvpoetrysociety.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Washington Poets Association",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://washingtonpoets.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Montana State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.montanapoets.com",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
     {
         name: "Alaska State Poetry Society",
-        url: "https://nfsps.net/state-poetry-societies",
+        url: "https://www.alaskapoets.org",
         category: "Regional Societies",
         categoryUrl: "regional-societies.html"
     },
@@ -2107,7 +2107,7 @@ const organizations = [
     },
     {
         name: "James Hearst Poetry Prize",
-        url: "https://www.pw.org/grants",
+        url: "https://northamericanreview.org/james-hearst-poetry-prize",
         category: "Awards & Prizes",
         categoryUrl: "awards.html"
     },
@@ -2137,31 +2137,31 @@ const organizations = [
     },
     {
         name: "Norma Farber First Book Award",
-        url: "https://www.poetrysociety.org",
+        url: "https://poetrysociety.org/awards/norma-farber-first-book-award",
         category: "Awards & Prizes",
         categoryUrl: "awards.html"
     },
     {
         name: "Ruth Lilly Poetry Prize",
-        url: "https://www.poetryfoundation.org",
+        url: "https://www.poetryfoundation.org/programs/ruth-lilly-poetry-prize",
         category: "Awards & Prizes",
         categoryUrl: "awards.html"
     },
     {
         name: "Kate Tufts Discovery Award",
-        url: "https://www.claremont.edu",
+        url: "https://www.cgu.edu/kate-tufts-poetry-awards",
         category: "Awards & Prizes",
         categoryUrl: "awards.html"
     },
     {
         name: "Agnes Lynch Starrett Poetry Prize",
-        url: "https://www.pitt.edu/~press",
+        url: "https://www.upress.pitt.edu/agnes-lynch-starrett-poetry-prize",
         category: "Awards & Prizes",
         categoryUrl: "awards.html"
     },
     {
         name: "Audre Lorde Award for Lesbian Poetry",
-        url: "https://www.lambdaliterary.org",
+        url: "https://www.lambdaliterary.org/awards",
         category: "Awards & Prizes",
         categoryUrl: "awards.html"
     },
@@ -2247,7 +2247,7 @@ const organizations = [
     },
     {
         name: "Sixth Finch",
-        url: "https://www.pw.org/directory",
+        url: "https://sixthfinch.com",
         category: "Online Platforms",
         categoryUrl: "online-platforms.html"
     },
@@ -2309,7 +2309,7 @@ const organizations = [
     },
     {
         name: "The Braag CIC",
-        url: "https://poets.org",
+        url: "https://thebraag.co.uk",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
@@ -2327,49 +2327,49 @@ const organizations = [
     },
     {
         name: "The Gallery Press (Irish)",
-        url: "https://www.pw.org/directory",
+        url: "https://www.gallerypress.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
     {
         name: "Green Bottle Press (UK)",
-        url: "https://www.pw.org/directory",
+        url: "https://greenbottlepress.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
     {
         name: "Broken Sleep Books (UK)",
-        url: "https://www.clmp.org",
+        url: "https://brokensleepbooks.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
     {
         name: "Sidekick Books (UK)",
-        url: "https://www.clmp.org",
+        url: "https://www.sidekickbooks.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
     {
         name: "CB editions (UK)",
-        url: "https://www.clmp.org",
+        url: "https://www.cbeditions.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
     {
         name: "Blueprint Poetry (UK/International)",
-        url: "https://www.pw.org/directory",
+        url: "https://blueprintreview.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
     {
         name: "Out-Spoken Press (UK)",
-        url: "https://www.pw.org/directory",
+        url: "https://outspokenldn.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
     {
         name: "Pindrop Press (UK)",
-        url: "https://www.pw.org/directory",
+        url: "https://www.pindroppress.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
@@ -2381,13 +2381,13 @@ const organizations = [
     },
     {
         name: "Sea Crow Press",
-        url: "https://www.pw.org/directory",
+        url: "https://www.seacrowpress.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
     {
         name: "Serving House Books",
-        url: "https://www.pw.org/directory",
+        url: "https://www.servinghousebooks.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
@@ -2411,13 +2411,13 @@ const organizations = [
     },
     {
         name: "Vegetarian Alcoholic Press",
-        url: "https://www.pw.org/directory",
+        url: "https://www.vegetarianalcoholicpress.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
     {
         name: "Woodhall Press",
-        url: "https://www.pw.org/directory",
+        url: "https://www.woodhallpress.com",
         category: "Additional Resources",
         categoryUrl: "additional-organizations.html"
     },
