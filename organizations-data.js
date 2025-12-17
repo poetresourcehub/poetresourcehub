@@ -4,18 +4,21 @@ const organizations = [
     {
         name: "Academy of American Poets",
         url: "https://poets.org",
+        description: "National organization championing poets and poetry through programs, publications, and advocacy",
         category: "Major Organizations",
         categoryUrl: "major-organizations.html"
     },
     {
         name: "Poetry Foundation",
         url: "https://www.poetryfoundation.org",
+        description: "Independent foundation supporting poetry through Poetry Magazine, grants, and educational programs",
         category: "Major Organizations",
         categoryUrl: "major-organizations.html"
     },
     {
         name: "Poetry Society of America",
         url: "https://poetrysociety.org",
+        description: "Literary organization promoting poetry through awards, education, and public programs since 1910",
         category: "Major Organizations",
         categoryUrl: "major-organizations.html"
     },

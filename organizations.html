@@ -247,6 +247,7 @@
                         orgDiv.className = 'org-item';
                         orgDiv.innerHTML = `
                             <h3>${org.name}</h3>
+                            ${org.description ? `<p class="org-description">${org.description}</p>` : ''}
                             <a href="${org.url}" target="_blank" rel="noopener noreferrer">${org.url}</a>
                         `;
                         container.appendChild(orgDiv);
